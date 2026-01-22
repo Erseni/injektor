@@ -396,9 +396,7 @@ class DependencyInjectionContainer {
             }
             $propertyInstance = $this->getInstanceOfClass($fullClassName, is_array($arguments) ? $arguments : array());
         }
-        $property->setAccessible(true);
         $property->setValue($instance, $propertyInstance);
-        $property->setAccessible(false);
     }
 
     /**
